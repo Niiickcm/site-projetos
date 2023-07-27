@@ -24,11 +24,11 @@ const ProfilePage: React.FC = () => {
       <ProfileData>
         <EditButton outlined>Editar perfil</EditButton>
 
-        <h1>Guilherme Rodz</h1>
-        <h2>@guilherme_rodz</h2>
+        <h1>Thiago Miguel</h1>
+        <h2>@niiickcm</h2>
 
         <p>
-          Developer at <a href="https://rocketseat.com.br">@Rocketseat</a>
+          Developer at <a href="https://fasters.com.br">@Fasters</a>
         </p>
 
         <ul>
@@ -38,7 +38,7 @@ const ProfilePage: React.FC = () => {
           </li>
           <li>
             <CakeIcon />
-            Nascido(a) em 21 de junho de 2001
+            Nascido(a) em 04 de janeiro de 2000
           </li>
         </ul>
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import {
   Heart,
-  ListOrderedIcon,
+  ListOrdered,
   ListVideo,
   Mic2,
   MonitorSmartphone,
@@ -16,11 +16,13 @@ import {
   Volume1,
   Volume2,
   VolumeX,
+  Play,
+  Pause,
 } from "lucide-react";
 
 import Album from "../../../public/assets/musics-logos/album.webp";
-import Pause from "../../../public/assets/svg-spotify/pause.svg";
-import Play from "../../../public/assets/svg-spotify/play.svg";
+/* import Pause from "../../../public/assets/svg-spotify/pause.svg"; */
+/* import Play from "../../../public/assets/svg-spotify/play.svg"; */
 import { useBarSpotify } from "@/context/barSpotify";
 
 export default function MusicBar() {
@@ -167,7 +169,7 @@ export default function MusicBar() {
         <div className="flex flex-col gap-2 items-center w-[60%] w-[276px]">
           <div className="flex justify-center gap-5 w-full">
             <button>
-              <ListOrderedIcon
+              <ListOrdered
                 className="text-[#ffffffb3] hover:text-white active:text-[#ffffffb3]"
                 size={20}
               />
@@ -184,18 +186,9 @@ export default function MusicBar() {
               className="flex items-center justify-center bg-blue-50 w-8 h-8 overflow-hidden rounded-full p-[2px] hover:scale-105 active:scale-95"
             >
               {isPlaying ? (
-                <Image
-                  style={{
-                    width: "13px",
-                    height: "14px",
-                    marginLeft: "3px",
-                    marginTop: "1px",
-                  }}
-                  src={Play}
-                  alt="play"
-                />
+                <Play style={{ marginLeft: 2.5 }} size={21} fill="#181818" />
               ) : (
-                <Image src={Pause} alt="pause" />
+                <Pause size={20} fill="#181818" />
               )}
             </button>
 

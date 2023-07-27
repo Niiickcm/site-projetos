@@ -1,6 +1,6 @@
 "use client";
 import styled, { css } from "styled-components";
-
+import { Twitter } from "lucide-react";
 import {
   Home,
   Notifications,
@@ -35,9 +35,10 @@ export const Topside = styled.div`
   }
 `;
 
-export const Logo = styled(Rocketseat)`
+export const Logo = styled(Twitter)`
   width: 41px;
   height: 41px;
+
   > path {
     fill: var(--twitter);
   }
@@ -60,7 +61,7 @@ export const MenuButton = styled.button`
     }
     padding-right: 15px;
   }
-  padding: 8.25px 0;
+  padding: 8.25px 8.25px;
   outline: 0;
   & + button {
     margin-top: 16.5px;

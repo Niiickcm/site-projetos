@@ -32,14 +32,14 @@ const Tweet: React.FC = () => {
 
         <Content>
           <Header>
-            <strong>Rocketseat</strong>
-            <span>@rocketseat</span>
+            <strong>Claudio</strong>
+            <span>@claudinho</span>
             <Dot />
             <time>27 de jun</time>
           </Header>
 
           {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-          <Description>Foguete não tem ré 🚀</Description>
+          <Description>Novo dia, novas chances </Description>
 
           <ImageContent />
 

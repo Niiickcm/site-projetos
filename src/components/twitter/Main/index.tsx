@@ -14,17 +14,20 @@ import {
   BellIcon,
   EmailIcon,
 } from "./styles";
+import Link from "next/link";
 
 const Main: React.FC = () => {
   return (
     <Container>
       <Header>
-        <button>
-          <BackIcon />
-        </button>
-
+        {" "}
+        <Link href="/">
+          <button>
+            <BackIcon />
+          </button>
+        </Link>
         <ProfileInfo>
-          <strong>Guilherme Rodz</strong>
+          <strong>Thiago Miguel</strong>
           <span>612 Tweets</span>
         </ProfileInfo>
       </Header>
