@@ -30,29 +30,32 @@ const SideBar: React.FC = () => {
               <FollowSuggestion
                 name="Henrique Santos"
                 nickname="@henriquesantos"
+                key={1}
               />,
               <FollowSuggestion
                 name="Rodolfo Baguare"
                 nickname="@rodolfobaguare"
+                key={2}
               />,
               <FollowSuggestion
                 name="Diego Magalhes"
                 nickname="@diego_magalhaes"
+                key={3}
               />,
             ]}
           />
           <List
             title="O que está acontecendo"
             elements={[
-              <News />,
-              <News />,
-              <News />,
-              <News />,
-              <News />,
-              <News />,
-              <News />,
-              <News />,
-              <News />,
+              <News key={4} />,
+              <News key={5} />,
+              <News key={6} />,
+              <News key={7} />,
+              <News key={8} />,
+              <News key={9} />,
+              <News key={10} />,
+              <News key={11} />,
+              <News key={12} />,
             ]}
           />
         </Body>

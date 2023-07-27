@@ -5,7 +5,7 @@ import { Container, Item, Title } from "./styles";
 
 interface Props {
   title: string;
-  elements: React.ReactNode[];
+  elements: React.ReactElement[];
 }
 
 const List: React.FC<Props> = ({ title, elements }) => {

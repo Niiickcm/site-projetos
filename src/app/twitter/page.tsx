@@ -13,11 +13,7 @@ export const metadata = {
   description: "Thiago Miguel",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout() {
   return (
     <>
       <Layout />
