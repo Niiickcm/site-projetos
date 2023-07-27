@@ -186,7 +186,7 @@ export default function MusicBar() {
               className="flex items-center justify-center bg-blue-50 w-8 h-8 overflow-hidden rounded-full p-[2px] hover:scale-105 active:scale-95"
             >
               {isPlaying ? (
-                <Play style={{ marginLeft: 2.5 }} size={21} fill="#181818" />
+                <Play style={{ marginLeft: 3 }} size={21} fill="#181818" />
               ) : (
                 <Pause size={20} fill="#181818" />
               )}
