@@ -4,6 +4,7 @@ import Link from "next/link";
 import vscodeIcon from "../../../public/assets/vscodeIcon.svg";
 import spotifyIcon from "../../../public/assets/svg-spotify/spotify.png";
 import twitter from "../../../public/assets/twitter/twitter.png";
+import netflix from "../../../public/assets/netflix/netflix.png";
 
 import { TaskBarType, useBarSpotify } from "@/context/barSpotify";
 import { Dispatch, SetStateAction } from "react";
@@ -24,6 +25,7 @@ export default function TaskBar() {
     { name: "vscode", url: "/vscode", icon: vscodeIcon },
     { name: "spotify", url: "/", icon: spotifyIcon },
     { name: "twitter", url: "/twitter", icon: twitter },
+    { name: "netflix", url: "/netflix/browser", icon: netflix },
   ];
   const handleClick = ({ name }: any) => {
     if (name == "spotify") {

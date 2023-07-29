@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background: transparent;
+  transition: all ease 0.4s;
+  user-select: none;
+}
+
+header.black {
+  background-color: #141414;
+}
+
+.header--logo {
+  height: 65px;
+}
+
+.header--logo img {
+  height: 100%;
+}
+
+.header--menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+ul {
+  display: flex;
+  width: 500px;
+  list-style: none;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  /*  font-size:  1.2vw; */
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+ul li a:focus {
+  font-weight: bold;
+}
+
+.header-menu-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 500px;
+}
+
+.header--user {
+  height: 35px;
+  margin-left: 20px;
+}
+
+.header--gift,
+.header--bell {
+  height: 26px;
+  margin-left: 20px;
+}
+
+.header--pesq {
+  display: flex;
+  height: 25px;
+  margin-right: 20px;
+}
+
+.header--pesq input {
+  width: 30px;
+  height: 33px;
+  margin-top: -2px;
+  margin-right: -26px;
+  border: none;
+  color: transparent;
+  user-select: none;
+  background-color: transparent;
+  transition: all 0.5s linear;
+}
+
+.header--pesq input:focus {
+  width: 260px;
+  background-color: #141414;
+  border: 1px solid white;
+  background-position-x: 8px;
+  background-size: 21px;
+  padding-left: 40px;
+  border-radius: 0;
+  color: white;
+  cursor: text;
+}
+
+.header--pesq input::placeholder {
+  color: transparent;
+}
+.header--pesq input:focus::placeholder {
+  color: grey;
+}
+
+.header-busca {
+  background: url("https://www.pngkit.com/png/full/14-140989_free-icons-png-instagram-search-icon-white.png")
+    no-repeat;
+  background-size: 22px;
+  background-position-y: center;
+  cursor: pointer;
+}
+
+.header--user img {
+  height: 100%;
+  border-radius: 3px;
+}
