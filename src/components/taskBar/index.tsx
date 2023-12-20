@@ -5,7 +5,7 @@ import vscodeIcon from "../../../public/assets/vscodeIcon.svg";
 import spotifyIcon from "../../../public/assets/svg-spotify/spotify.png";
 import twitter from "../../../public/assets/twitter/twitter.png";
 import netflix from "../../../public/assets/netflix/netflix.png";
-
+import googleIa from "../../../public/assets/google-ia/google-ia.png";
 import { TaskBarType, useBarSpotify } from "@/context/barSpotify";
 import { Dispatch, SetStateAction } from "react";
 
@@ -26,6 +26,7 @@ export default function TaskBar() {
     { name: "spotify", url: "/", icon: spotifyIcon },
     { name: "twitter", url: "/twitter", icon: twitter },
     { name: "netflix", url: "/netflix/browser", icon: netflix },
+    { name: "google IA", url: "/chatIA", icon: googleIa },
   ];
   const handleClick = ({ name }: any) => {
     if (name == "spotify") {
@@ -41,7 +42,7 @@ export default function TaskBar() {
       } shadow-sm bg-white bg-opacity-30 rounded-2xl p-3 transition-all`}
     >
       {menusBar.map((item, k) => (
-        <Link
+        <a
           key={k}
           href={item.url}
           className="flex items-center justify-center w-12 h-12 bg-white rounded-xl hover:scale-110 transition-all focus:translate-y-[-8px]  active:transition-duration"
@@ -53,7 +54,7 @@ export default function TaskBar() {
             height={32}
             style={{ borderRadius: "50%" }}
           />
-        </Link>
+        </a>
       ))}
     </div>
   );

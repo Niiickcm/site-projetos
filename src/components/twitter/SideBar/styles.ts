@@ -1,4 +1,3 @@
-"use client";
 import styled from "styled-components";
 
 import { Search } from "../../../styles/twitter/icons";

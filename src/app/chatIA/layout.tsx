@@ -1,4 +1,5 @@
 "use client";
+import "../../styles/chatIA/index.css";
 import React, {
   useEffect,
   useState,
@@ -7,11 +8,13 @@ import React, {
   KeyboardEvent,
   MouseEvent,
 } from "react";
-import "../../styles/chatIA/index.css";
+
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
 
 import { Inter } from "@next/font/google";
+import { ArrowBigLeft } from "lucide-react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -273,6 +276,11 @@ export default function RootLayout({
             </div>
             <div className="credits-div">
               <p>Feito por Thiago Miguel</p>
+              <strong>
+                <Link href="/">
+                  <ArrowBigLeft color="white" size={25} strokeWidth={1.75} />
+                </Link>
+              </strong>
             </div>
           </div>
           <div id="resultText" className="result-text">
