@@ -1,7 +1,9 @@
 import React from "react";
 import "./styles.css";
 import Link from "next/link";
-import { Bell, Gift } from "lucide-react";
+import { Bell, Gift, Search } from "lucide-react";
+import logo from "../../../../public/assets/netflix/logo.png";
+import Image from "next/image";
 
 interface Props {
   black: Boolean;
@@ -12,10 +14,7 @@ const Header = ({ black }: Props) => {
     <header className={black ? "black" : ""}>
       <div className="header--logo">
         <Link href="/netflix/browser">
-          <img
-            src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
-            alt="Netflix"
-          />
+          <Image width={100} src={logo} alt="Netflix" />
         </Link>
       </div>
       <div className="header--menu">
@@ -38,19 +37,19 @@ const Header = ({ black }: Props) => {
         </ul>
         <div className="header-menu-secondary">
           <div className="header--pesq">
-            <input
-              className="header-busca"
-              placeholder="Titulos, gente e gêneros"
-            />
+            <div className="header-busca">
+              <Search />
+            </div>
+            <input placeholder="Titulos, gente e gêneros" />
           </div>
           <div className="header--gift">
             <a href="">
-              <Gift size={30} color="grey" />
+              <Gift size={30} color="#fff" />
             </a>
           </div>
           <div className="header--bell">
             <a href="">
-              <Bell size={30} color="grey" />
+              <Bell size={30} color="#fff" />
             </a>
           </div>
           <div className="header--user">
