@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 import { Search } from "../../../styles/twitter/icons";
 
+interface SearchInputProps {
+  placeholder?: string;
+}
+
 export const Container = styled.div`
   display: none;
   @media (min-width: 1000px) {
@@ -21,7 +25,7 @@ export const SearchWrapper = styled.div`
   max-height: 57px;
 `;
 
-export const SearchInput = styled.input`
+export const SearchInput = styled.input<SearchInputProps>`
   width: 100%;
   height: 39px;
   font-size: 14px;

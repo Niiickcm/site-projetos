@@ -54,7 +54,10 @@ const Header = ({ black }: Props) => {
           </div>
           <div className="header--user">
             <a href="">
-              <img src="https://occ-0-1069-1567.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABcqBskTCn3DkGQQb75keSWbkb7UvDc5R_1jJvJuDyp6GgGN_TeMbo_kPwlwmE0gwOmeTh2hNyKhotFROEYtkelSkKYmL.png?r=fcc" />
+              <Image
+                alt="image"
+                src="https://occ-0-1069-1567.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABcqBskTCn3DkGQQb75keSWbkb7UvDc5R_1jJvJuDyp6GgGN_TeMbo_kPwlwmE0gwOmeTh2hNyKhotFROEYtkelSkKYmL.png?r=fcc"
+              />
             </a>
           </div>
         </div>

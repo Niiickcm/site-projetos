@@ -15,6 +15,7 @@ import { HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
 import { Inter } from "@next/font/google";
 import { ArrowBigLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,11 +35,7 @@ interface PropsDiscribeImage {
   parts: Parts;
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout() {
   const [inputText, setInputText] = useState("");
   const [imageData, setImageData] = useState<FileList | null>();
   const [imageView, setImageView] = useState<string[]>([]);
@@ -205,9 +202,10 @@ export default function RootLayout({
         <div className="container">
           <div className="sidebar">
             <div className="sidebar-title">
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Google_Bard_logo.svg"
                 id="gemin-pro-logo"
+                alt="logo"
               />
               <h1>Google IA -</h1>
               <h1 id="gemini-pro-branding">Gemini Pro</h1>
@@ -235,8 +233,12 @@ export default function RootLayout({
                     {
                       <div className="carrousel-images">
                         {imageView.map((item, k) => (
-                          <div className="img-wrapper">
-                            <img key={k} className="image-add" src={item} />
+                          <div key={k} className="img-wrapper">
+                            <Image
+                              className="image-add"
+                              src={item}
+                              alt="image-item"
+                            />
                           </div>
                         ))}
                       </div>
@@ -298,8 +300,12 @@ export default function RootLayout({
                       {item.role == "user" && (
                         <div className="carrousel-images">
                           {item.parts.images?.map((item, k) => (
-                            <div className="img-wrapper">
-                              <img key={k} className="image-add" src={item} />
+                            <div key={k} className="img-wrapper">
+                              <Image
+                                className="image-add"
+                                src={item}
+                                alt="image-item"
+                              />
                             </div>
                           ))}
                         </div>

@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 import Button from "../Button";
 
+interface FollowButtonProps {
+  outlined?: boolean;
+  children: React.ReactNode; // Esta definição permite que qualquer conteúdo seja passado como filho do componente
+}
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -32,6 +37,6 @@ export const Info = styled.div`
   }
 `;
 
-export const FollowButton = styled(Button)`
+export const FollowButton = styled(Button)<FollowButtonProps>`
   padding: 6px 17px;
 `;

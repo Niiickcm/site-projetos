@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 interface Props {
   outlined?: boolean;
+  children?: React.ReactNode;
 }
 
 export default styled.button<Props>`

@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ItemProps {
+  children: React.ReactNode; // Esta definição permite que qualquer conteúdo seja passado como filho do componente
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,7 +11,7 @@ export const Container = styled.div`
   border-radius: 14px;
 `;
 
-export const Item = styled.div`
+export const Item = styled.div<ItemProps>`
   padding: 10px 16px;
   & + div {
     border-top: 1px solid var(--outline);

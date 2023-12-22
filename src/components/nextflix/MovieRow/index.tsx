@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 interface Props {
   title: String;
@@ -53,8 +54,9 @@ const MovieRow = ({ title, items }: Props) => {
           {items.results?.length > 0 &&
             items.results.map((item: PropsItems, k: number) => (
               <div key={k} className="movieRow--item">
-                <img
+                <Image
                   src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
+                  alt="filme-nextflix"
                 />
               </div>
             ))}

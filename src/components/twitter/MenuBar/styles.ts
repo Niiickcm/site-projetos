@@ -10,6 +10,11 @@ import {
   Rocketseat,
 } from "../../../styles/twitter/icons";
 
+interface MenuButtonProps {
+  className?: string;
+  children?: React.ReactNode; // Esta definição permite que qualquer conteúdo seja passado como filho do componente
+}
+
 export const Container = styled.div`
   display: none;
   @media (min-width: 500px) {
@@ -44,7 +49,7 @@ export const Logo = styled(Twitter)`
   margin-bottom: 20px;
 `;
 
-export const MenuButton = styled.button`
+export const MenuButton = styled.button<MenuButtonProps>`
   display: flex;
   align-items: center;
   flex-shrink: 0;
