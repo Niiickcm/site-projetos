@@ -82,6 +82,7 @@ ul li a:focus {
 }
 
 .header--pesq input {
+  z-index: 99;
   width: 30px;
   height: 33px;
   margin-top: -2px;
@@ -114,7 +115,6 @@ ul li a:focus {
 
 .header-busca {
   position: absolute;
-  top: 5px;
   background-size: 22px;
   background-position-y: center;
   cursor: pointer;

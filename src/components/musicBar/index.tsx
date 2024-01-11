@@ -91,7 +91,7 @@ export default function MusicBar() {
   }
   const [currentTimeBar, setCurrentTimeBar] = useState<any>(0);
   const [hoverRange, setHoverRange] = useState(false);
-  console.log("audioRef.current", currentTimeBar);
+
   const styleRange: any = {
     width: "15px",
     height: "15px",

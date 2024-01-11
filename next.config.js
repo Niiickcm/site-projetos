@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["image.tmdb.org", "upload.wikimedia.org"], // Add the hostname for images
+  },
   webpack(config, options) {
     config.module.rules.push({
       test: /\.mp3$/,

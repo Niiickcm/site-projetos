@@ -23,7 +23,6 @@ const Browser = () => {
       //Pegando a lista total
 
       let list = await Tmdb?.getHomeList();
-      console.log("list", list);
       setMovieList(list);
 
       // filtrando os filmes originais da api

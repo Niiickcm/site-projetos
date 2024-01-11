@@ -206,6 +206,8 @@ export default function RootLayout() {
                 src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Google_Bard_logo.svg"
                 id="gemin-pro-logo"
                 alt="logo"
+                width={30}
+                height={30}
               />
               <h1>Google IA -</h1>
               <h1 id="gemini-pro-branding">Gemini Pro</h1>
@@ -234,7 +236,7 @@ export default function RootLayout() {
                       <div className="carrousel-images">
                         {imageView.map((item, k) => (
                           <div key={k} className="img-wrapper">
-                            <Image
+                            <img
                               className="image-add"
                               src={item}
                               alt="image-item"
@@ -301,7 +303,7 @@ export default function RootLayout() {
                         <div className="carrousel-images">
                           {item.parts.images?.map((item, k) => (
                             <div key={k} className="img-wrapper">
-                              <Image
+                              <img
                                 className="image-add"
                                 src={item}
                                 alt="image-item"

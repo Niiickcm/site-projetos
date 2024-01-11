@@ -57,6 +57,8 @@ const MovieRow = ({ title, items }: Props) => {
                 <Image
                   src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
                   alt="filme-nextflix"
+                  width={300}
+                  height={300}
                 />
               </div>
             ))}

@@ -10,7 +10,6 @@ const notionPagesIdStore = z.object({
 
 export async function getNotionPagesId() {
   const pagesId = await get("notion");
-  console.log("page", pagesId);
 
   return notionPagesIdStore.parse(pagesId);
 }

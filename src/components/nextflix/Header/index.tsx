@@ -3,6 +3,8 @@ import "./styles.css";
 import Link from "next/link";
 import { Bell, Gift, Search } from "lucide-react";
 import logo from "../../../../public/assets/netflix/logo.png";
+import LogoIconNetflix from "../../../../public/assets/netflix/login-icon-netflix.png";
+
 import Image from "next/image";
 
 interface Props {
@@ -38,7 +40,7 @@ const Header = ({ black }: Props) => {
         <div className="header-menu-secondary">
           <div className="header--pesq">
             <div className="header-busca">
-              <Search />
+              <Search size={28} color="#fff" />
             </div>
             <input placeholder="Titulos, gente e gêneros" />
           </div>
@@ -54,10 +56,7 @@ const Header = ({ black }: Props) => {
           </div>
           <div className="header--user">
             <a href="">
-              <Image
-                alt="image"
-                src="https://occ-0-1069-1567.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABcqBskTCn3DkGQQb75keSWbkb7UvDc5R_1jJvJuDyp6GgGN_TeMbo_kPwlwmE0gwOmeTh2hNyKhotFROEYtkelSkKYmL.png?r=fcc"
-              />
+              <Image alt="image" src={LogoIconNetflix} width={45} />
             </a>
           </div>
         </div>

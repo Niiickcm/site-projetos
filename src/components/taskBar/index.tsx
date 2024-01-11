@@ -1,4 +1,5 @@
 "use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import vscodeIcon from "../../../public/assets/vscodeIcon.svg";
@@ -8,11 +9,13 @@ import netflix from "../../../public/assets/netflix/netflix.png";
 import googleIa from "../../../public/assets/google-ia/google-ia.png";
 import { TaskBarType, useBarSpotify } from "@/context/barSpotify";
 import { Dispatch, SetStateAction } from "react";
+import useDriveSession from "@/app/hooksTaskBar/useDriveSession";
 
 interface Props {
   name: string;
   url: string;
   icon: HTMLImageElement;
+  id: string;
 }
 
 interface PropsMenu {
@@ -21,13 +24,15 @@ interface PropsMenu {
 
 export default function TaskBar() {
   const { setState, state } = useBarSpotify();
+  useDriveSession();
   const menusBar: Array<Props> = [
-    { name: "vscode", url: "/vscode", icon: vscodeIcon },
-    { name: "spotify", url: "/", icon: spotifyIcon },
-    { name: "twitter", url: "/twitter", icon: twitter },
-    { name: "netflix", url: "/netflix/browser", icon: netflix },
-    { name: "google IA", url: "/chatIA", icon: googleIa },
+    { name: "vscode", url: "/vscode", icon: vscodeIcon, id: "vscode" },
+    { name: "spotify", url: "", icon: spotifyIcon, id: "spotify" },
+    { name: "twitter", url: "/twitter", icon: twitter, id: "twitter" },
+    { name: "netflix", url: "/netflix/browser", icon: netflix, id: "netflix" },
+    { name: "google IA", url: "/chatIA", icon: googleIa, id: "google_ia" },
   ];
+
   const handleClick = ({ name }: any) => {
     if (name == "spotify") {
       setState((state) => {
@@ -37,6 +42,7 @@ export default function TaskBar() {
   };
   return (
     <div
+      id="taskbar"
       className={`flex gap-3 absolute ${
         state.open ? "bottom-24" : "bottom-2"
       } shadow-sm bg-white bg-opacity-30 rounded-2xl p-3 transition-all`}
@@ -44,7 +50,8 @@ export default function TaskBar() {
       {menusBar.map((item, k) => (
         <a
           key={k}
-          href={item.url}
+          id={item.id}
+          href={item.url ? item.url : "#!"}
           className="flex items-center justify-center w-12 h-12 bg-white rounded-xl hover:scale-110 transition-all focus:translate-y-[-8px]  active:transition-duration"
           onClick={() => handleClick(item)}
         >
