@@ -189,7 +189,7 @@ const Portfolio = () => {
           Olá! me chamo Thiago, tenho {anos} anos e sou apaixonado por
           tecnologia desde que entrei na faculdade de Análise e Desenvolvimento
           de Sistemas aos 18 anos. Gosto Muito de sair com os amigos, estudar
-          sobre novas linguangens e jogar.
+          sobre novas linguagens e jogar.
         </p>
         <h2 className="text-[#cd5ff8] text-3xl animate__animated animate__slideInLeft">
           Jornada Acadêmica
