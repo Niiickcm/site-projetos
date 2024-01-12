@@ -15,7 +15,6 @@ export const metadata = {
 
 export default function RootLayout() {
   const GlobalStylesComponet = () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     return <GlobalStyles />;
   };
