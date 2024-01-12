@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import "animate.css";
 import { TailwindCss } from "@styled-icons/boxicons-logos/TailwindCss";
 import { Css3 } from "@styled-icons/boxicons-logos/Css3";
 import { ReactLogo } from "@styled-icons/fa-brands/ReactLogo";
