@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import vscodeIcon from "../../../public/assets/vscodeIcon.svg";
+import vscodeIcon from "../../../public/assets/vscode/vscodeIcon.png";
 import spotifyIcon from "../../../public/assets/svg-spotify/spotify.png";
 import twitter from "../../../public/assets/twitter/twitter.png";
 import netflix from "../../../public/assets/netflix/netflix.png";
@@ -14,7 +14,7 @@ import useDriveSession from "@/app/hooksTaskBar/useDriveSession";
 interface Props {
   name: string;
   url: string;
-  icon: HTMLImageElement;
+  icon: StaticImageData;
   id: string;
 }
 

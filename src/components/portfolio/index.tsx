@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import "animate.css";
 import { TailwindCss } from "@styled-icons/boxicons-logos/TailwindCss";
 import { Css3 } from "@styled-icons/boxicons-logos/Css3";
 import { ReactLogo } from "@styled-icons/fa-brands/ReactLogo";
@@ -14,36 +15,156 @@ import { Nextdotjs } from "@styled-icons/simple-icons/Nextdotjs";
 import { Vite } from "@styled-icons/simple-icons/Vite";
 import { Bootstrap } from "@styled-icons/boxicons-logos/Bootstrap";
 import { Framer } from "@styled-icons/simple-icons/Framer";
+import MinhaImagem from "../../../public/assets/portfolio/minha-imagem.jpg";
+import Image from "next/image";
 
 const Portfolio = () => {
   const stacks = [
     {
-      icon: <ReactLogo size={40} color={"#fff"} />,
+      icon: (
+        <ReactLogo
+          className="animate__animated animate__fadeInDown"
+          size={40}
+          color={"#fff"}
+        />
+      ),
       name: "ReactJS/React Native",
     },
-    { icon: <Nextdotjs size={40} color={"#fff"} />, name: "NextJS" },
-    { icon: <Vite size={40} color={"#fff"} />, name: "Vite" },
-    { icon: <Vuejs size={40} color={"#fff"} />, name: "VueJS" },
-    { icon: <Redux size={40} color={"#fff"} />, name: "Redux/Redux Toolkit" },
-    { icon: <Reduxsaga size={40} color={"#fff"} />, name: "Redux Saga" },
-    { icon: <Storybook size={40} color={"#fff"} />, name: "StoryBook" },
-    { icon: <Mui size={40} color={"#fff"} />, name: "Material UI" },
-    { icon: <TailwindCss size={40} color={"#fff"} />, name: "Tailwind Css" },
-    { icon: <Css3 size={40} color={"#fff"} />, name: "Css" },
     {
-      icon: <Styledcomponents size={40} color={"#fff"} />,
+      icon: (
+        <Nextdotjs
+          className="animate__animated animate__fadeInUp"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "NextJS",
+    },
+    {
+      icon: (
+        <Vite
+          className="animate__animated animate__fadeInDown"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "Vite",
+    },
+    {
+      icon: (
+        <Vuejs
+          className="animate__animated animate__fadeInUp"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "VueJS",
+    },
+    {
+      icon: (
+        <Redux
+          className="animate__animated animate__fadeInDown"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "Redux/Redux Toolkit",
+    },
+    {
+      icon: (
+        <Reduxsaga
+          className="animate__animated animate__fadeInUp"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "Redux Saga",
+    },
+    {
+      icon: (
+        <Storybook
+          className="animate__animated animate__fadeInDown"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "StoryBook",
+    },
+    {
+      icon: (
+        <Mui
+          className="animate__animated animate__fadeInUp"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "Material UI",
+    },
+    {
+      icon: (
+        <TailwindCss
+          className="animate__animated animate__fadeInDown"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "Tailwind Css",
+    },
+    {
+      icon: (
+        <Css3
+          className="animate__animated animate__fadeInUp"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "Css",
+    },
+    {
+      icon: (
+        <Styledcomponents
+          className="animate__animated animate__fadeInDown"
+          size={40}
+          color={"#fff"}
+        />
+      ),
       name: "Styled Components",
     },
-    { icon: <Bootstrap size={40} color={"#fff"} />, name: "Bootstrap" },
-    { icon: <Framer size={40} color={"#fff"} />, name: "Framer Motion" },
+    {
+      icon: (
+        <Bootstrap
+          className="animate__animated animate__fadeInUp"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "Bootstrap",
+    },
+    {
+      icon: (
+        <Framer
+          className="animate__animated animate__fadeInDown"
+          size={40}
+          color={"#fff"}
+        />
+      ),
+      name: "Framer Motion",
+    },
   ];
+
+  var ano_atual = new Date().getFullYear();
+  var ano_informado = 2000;
+  var anos = ano_atual - ano_informado;
+
   return (
     <div className="relative flex gap-5 flex-col p-4 w-full max-w-3xl h-auto  bg-[#12121a] rounded-lg mt-0 mb-[12vh] md:mt-[3vh] ">
       <div className="flex gap-5 items-center flex-col w-full ">
-        <div className="w-28 h-28 rounded-full bg-[#cd5ff8]">
-          <img />
+        <div className="w-28 h-28 rounded-full bg-[#cd5ff8] overflow-hidden animate__animated animate__flipInY  ">
+          <Image src={MinhaImagem} alt="eu" />
         </div>
-        <p className="text-[#f5f5f5] text-lg">Thiago Miguel</p>{" "}
+        <p className="text-[#f5f5f5] text-lg animate__animated  animate__zoomIn ">
+          Thiago Miguel
+        </p>{" "}
         <div>
           <p className="text-[#f5f5f5] text-lg mb-3">Tecnologias:</p>
           <div className="flex gap-3 flex-wrap">
@@ -62,15 +183,19 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="w-full font-normal overflow-auto scrollbar scrollbar-thumb-[#cd5ff8] scrollbar-thin scrollbar-track-slate-50">
-        <h1 className="text-[#cd5ff8] text-3xl ">Sobre mim</h1>
-        <p className="text-[#f5f5f5] m-5">
-          Olá! me chamo Thiago, tenho 24 anos e sou apaixonado por tecnologia
-          desde que entrei na faculdade de Análise e Desenvolvimento de Sistemas
-          aos 18 anos. Gosto Muito de sair com os amigos, estudar sobre novas
-          linguangens e jogar.
+        <h1 className="text-[#cd5ff8] text-3xl animate__animated animate__slideInLeft ">
+          Sobre mim
+        </h1>
+        <p className="text-[#f5f5f5] m-5 animate__animated animate__slideInRight">
+          Olá! me chamo Thiago, tenho {anos} anos e sou apaixonado por
+          tecnologia desde que entrei na faculdade de Análise e Desenvolvimento
+          de Sistemas aos 18 anos. Gosto Muito de sair com os amigos, estudar
+          sobre novas linguangens e jogar.
         </p>
-        <h2 className="text-[#cd5ff8] text-3xl ">Jornada Acadêmica</h2>
-        <p className="text-[#f5f5f5] m-5">
+        <h2 className="text-[#cd5ff8] text-3xl animate__animated animate__slideInLeft">
+          Jornada Acadêmica
+        </h2>
+        <p className="text-[#f5f5f5] m-5 animate__animated animate__slideInRight">
           Minha jornada acadêmica foi marcada por um projeto de conclusão de
           curso que me cativou profundamente: desenvolvemos um estádio
           inteligente, uma inovação que conquistou o segundo lugar e despertou
@@ -85,8 +210,10 @@ const Portfolio = () => {
           ele tem sido uma jornada incrível, permitindo-me desenvolver soluções
           inovadoras e desafiadoras.
         </p>
-        <h2 className="text-[#cd5ff8] text-3xl ">Mercado de Trabalho</h2>
-        <p className="text-[#f5f5f5] m-5">
+        <h2 className="text-[#cd5ff8] text-3xl animate__animated animate__slideInLeft">
+          Mercado de Trabalho
+        </h2>
+        <p className="text-[#f5f5f5] m-5 animate__animated animate__slideInRight">
           Meus últimos três anos na FASTERS foram fundamentais para minha
           evolução profissional. Nesta empresa de software, tive a oportunidade
           de mergulhar em diversos projetos desafiadores, aprimorando

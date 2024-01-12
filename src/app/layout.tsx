@@ -1,4 +1,5 @@
 import GlobalContext from "@/context";
+import Head from "next/head";
 
 export const metadata = {
   title: "Next.js",
@@ -12,6 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+      </Head>
       <GlobalContext>
         <body className="relative w-screen h-screen transition-all">
           {children}

@@ -1,7 +1,7 @@
 "use client";
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle`
+export default createGlobalStyle<any>`
   * {
     margin: 0;
     padding: 0;
