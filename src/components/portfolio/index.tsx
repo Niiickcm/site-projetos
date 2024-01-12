@@ -16,6 +16,7 @@ import { Bootstrap } from "@styled-icons/boxicons-logos/Bootstrap";
 import { Framer } from "@styled-icons/simple-icons/Framer";
 import MinhaImagem from "../../../public/assets/portfolio/minha-imagem.jpg";
 import Image from "next/image";
+import "animate.css";
 
 const Portfolio = () => {
   const stacks = [
