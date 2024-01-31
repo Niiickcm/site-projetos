@@ -295,6 +295,7 @@ const Portfolio = () => {
           <strong>Tecnologias:</strong>{" "}
           <span className="text-[#cd5ff8]">
             ReactJS, Redux, Redux Saga, Styled Components, Testing Library, Jest
+            e PHP
           </span>
           <br />
           Participei ativamente do desenvolvimento deste sistema completo,
